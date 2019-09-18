@@ -10,6 +10,7 @@ export const Defaults = createGlobalStyle`
   }
 
   body {
+    background-color: ${props => props.theme.background};
     margin: 0;
   }
 

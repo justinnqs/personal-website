@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const NavBarItemsContainer = styled.div `
+const NavBarItemsContainer = styled.span `
     height: 100%;
     width: 100%;
     display: flex;

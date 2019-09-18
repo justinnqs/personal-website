@@ -1,37 +1,47 @@
 {
-  "name": "personal-website",
-  "version": "0.1.0",
+  "name": "gatsby-starter-default",
   "private": true,
+  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "version": "0.1.0",
+  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.22",
-    "@fortawesome/free-brands-svg-icons": "^5.10.2",
-    "@fortawesome/free-solid-svg-icons": "^5.10.2",
+    "@fortawesome/fontawesome-svg-core": "^1.2.23",
+    "@fortawesome/free-brands-svg-icons": "^5.11.0",
     "@fortawesome/react-fontawesome": "^0.1.4",
+    "gatsby": "^2.15.17",
+    "gatsby-image": "^2.2.19",
+    "gatsby-plugin-manifest": "^2.2.16",
+    "gatsby-plugin-offline": "^3.0.7",
+    "gatsby-plugin-react-helmet": "^3.1.7",
+    "gatsby-plugin-sharp": "^2.2.23",
+    "gatsby-source-filesystem": "^2.1.23",
+    "gatsby-transformer-sharp": "^2.2.14",
+    "prop-types": "^15.7.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-redux": "^7.1.1",
-    "react-scripts": "3.1.1",
+    "react-helmet": "^5.2.1",
     "styled-components": "^4.3.2"
   },
+  "devDependencies": {
+    "prettier": "^1.18.2"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
   }
 }
