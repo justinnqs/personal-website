@@ -2,11 +2,12 @@ import React, { useRef } from 'react';
 import styled from 'styled-components';
 import { TextInput } from '../atoms/TextInput';
 
-const TerminalContainer = styled.div `
+const TerminalContainer = styled.footer `
     background-color: black;
     width: 100%;
     position: fixed;
     bottom: 0;
+    z-index: -1;
 `
 
 const TerminalLabel = styled.h4 `

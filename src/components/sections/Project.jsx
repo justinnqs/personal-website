@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import ProjectTemplate from '../components/templates/ProjectTemplate';
-import { PageTitle } from '../components/atoms/Headers';
-
+import ProjectTemplate from '../templates/ProjectTemplate';
+import { PageTitle } from '../atoms/Headers';
 
 
 const Project = () => {

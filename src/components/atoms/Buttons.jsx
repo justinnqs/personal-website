@@ -13,6 +13,6 @@ export const DefaultButtonStyle = styled.button `
     cursor: pointer;
 
     &:hover {
-        background-color: ${props => props.theme.highlight};
+        background-color: ${props => props.theme.subtleHighlight};
     }
 `;

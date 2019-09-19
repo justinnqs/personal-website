@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const LandingTemplateContainer = styled.div `
+const LandingTemplateContainer = styled.section `
     position: fixed;
     width: 100vw;
     height: 100vh;
@@ -29,7 +29,6 @@ const LandingTemplate = (props) => {
                     {props.children[1]}
                 </DescriptionContainer>
             </TitleContainer>
-            
         </LandingTemplateContainer>
     );
 }

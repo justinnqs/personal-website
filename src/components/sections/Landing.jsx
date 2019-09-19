@@ -1,6 +1,6 @@
 import React from 'react';
-import LandingTemplate from '../components/templates/LandingTemplate';
-import { Title, SubTitle } from '../components/atoms/Headers';
+import LandingTemplate from '../templates/LandingTemplate';
+import { Title, SubTitle } from '../atoms/Headers';
 
 const Landing = (props) => {
     return(

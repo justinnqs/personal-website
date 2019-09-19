@@ -1,41 +1,36 @@
 import React from 'react';
 import styled from 'styled-components';
+import { ProjectItem } from '../molecules/ProjectItem';
+import { ProjectCarousel } from '../organisms/ProjectCarousel';
 
-const ProjectSpacer = styled.div `
+const ProjectContainer = styled.section`
     position: relative;
     top: 100vh;
-`
-
-const ProjectContainer = styled.div `
-    height: 100vh;
+    background: ${props => props.theme.background};
+    padding-top: 6.5rem;
     width: 100vw;
 `
 
-const ChildrenContainer = styled.div `
-    position: relative;
-    top: 6.5rem;
-    background: ${props => props.theme.background};
-    height: 55rem;
-`
-
 const TitleContainer = styled.div `
-    margin-left: 6rem;
-    width: 15%;
-    color: ${props => props.theme.background};
+    margin-left: 8rem;
+    width: 25rem;
 `
-
 
 const ProjectTemplate = (props) => {
     return(
-        <ProjectSpacer>
-            <ProjectContainer>
-                <ChildrenContainer>
-                    <TitleContainer>
-                        {props.children}
-                    </TitleContainer>
-                </ChildrenContainer>
-            </ProjectContainer>
-        </ProjectSpacer>
+        <ProjectContainer>
+            <TitleContainer>
+                {props.children}
+            </TitleContainer>
+            <ProjectCarousel>
+                <ProjectItem />
+                <ProjectItem />
+                <ProjectItem />
+                <ProjectItem />
+                <ProjectItem />
+                <ProjectItem />
+            </ProjectCarousel>
+        </ProjectContainer>
     );
 }
 

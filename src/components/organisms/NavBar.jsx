@@ -3,9 +3,10 @@ import styled from 'styled-components';
 import { NavBarItems } from '../molecules/NavBarItems';
 import { DefaultButtonStyle } from '../atoms/Buttons';
 import { DefaultLinkStyle } from '../atoms/Links';
+import { Logo } from '../atoms/Logo';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const NavBarContainer = styled.div `
+const NavBarContainer = styled.header `
     position: fixed;
     width: 100%;
     height: 6.5rem;
@@ -29,12 +30,6 @@ const RightSide = styled.span `
     align-items: center;
     float: right;
     height: 100%;
-`
-const Logo = styled.a `
-    font-family: inherit;
-    font-weight: 900;
-    font-size: 4rem;
-    color: ${props => props.theme.highlight};
 `
 
 const NavLink = styled(DefaultLinkStyle) `
