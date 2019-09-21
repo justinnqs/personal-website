@@ -5,6 +5,7 @@ module.exports = {
     author: `@justinsian`,
   },
   plugins: [
+    `gatsby-plugin-netlify-cms`,
     {
       resolve: `gatsby-plugin-typography`,
       options: {
