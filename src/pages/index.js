@@ -7,8 +7,9 @@ import SEO from "../components/seo"
 
 
 import { ThemeProvider } from 'styled-components';
-import { defaultTheme, invertTheme } from '../components/atoms/Theme';
+import { defaultTheme } from '../components/atoms/Theme';
 import { Defaults } from '../components/atoms/Defaults';
+import IndexTemplate from '../components/templates/IndexTemplate';
 import Landing from '../components/sections/Landing';
 import Project from '../components/sections/Project';
 import Contact from '../components/sections/Contact';
@@ -24,15 +25,15 @@ library.add(
 const IndexPage = () => (
   <ThemeProvider theme={defaultTheme}>
     <Layout>
-        <Defaults />
-        <SEO title="Home" />
+      <SEO title="Home" />
+      <Defaults />
+      <IndexTemplate>
         <Landing />
-        <ThemeProvider theme={invertTheme}>
-          <React.Fragment>
-            <Project />
-            <Contact />
-          </React.Fragment>
-        </ThemeProvider>
+        {/* <ThemeProvider theme={invertTheme}> */}
+        <Project />
+        <Contact />
+        {/* </ThemeProvider> */}
+      </IndexTemplate>
     </Layout>
   </ThemeProvider>
 
