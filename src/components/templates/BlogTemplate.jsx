@@ -25,20 +25,10 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
-        path
+        featuredImage
         title
+        date(formatString: "MMMM DD, YYYY")
         description
-        image {
-          childImageSharp {
-            resize(width: 1500, height: 1500) {
-              src
-            }
-            fluid(maxWidth: 786) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
       }
     }
   }

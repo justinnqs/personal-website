@@ -5,13 +5,6 @@ module.exports = {
     author: `@justinsian`,
   },
   plugins: [
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `blog`,
-        path: `${__dirname}/blog`,
-      },
-    },
     `gatsby-plugin-netlify-cms`,
     {
       resolve: `gatsby-plugin-typography`,
@@ -29,6 +22,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `images`,
         path: `${__dirname}/src/images`,
       },
     },
