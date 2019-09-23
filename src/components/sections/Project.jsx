@@ -19,42 +19,45 @@ const TitleContainer = styled.div `
 
 const Project = () => {
     return(
-        <StaticQuery
-            query={graphql`
-            query ProjectQuery {
-                allMarkdownRemark(
-                    sort: { order: DESC, fields: [frontmatter___date] }
-                    limit: 1000
-                  ) {
-                    edges {
-                      node {
-                        frontmatter {
-                          path
-                          title
-                          description
-                          image
-                        }
-                      }
-                    }
-                  }
-              }
-            `}
-            render={data => (
-                <ProjectContainer>
-                    <TitleContainer>
-                        <PageTitle>Projects</PageTitle>
-                    </TitleContainer>
-                    <ProjectCarousel>
-                        {
-                            data.allMarkdownRemark.edges.map(() => {
-                                return <ProjectItem />
-                            })
-                        }
-                    </ProjectCarousel>
-                </ProjectContainer>
-            )}
-        />
-    );
+        <React.Fragment></React.Fragment>
+    )
+    // return(
+    //     <StaticQuery
+    //         query={graphql`
+    //         query ProjectQuery {
+    //             allMarkdownRemark(
+    //                 sort: { order: DESC, fields: [frontmatter___date] }
+    //                 limit: 1000
+    //               ) {
+    //                 edges {
+    //                   node {
+    //                     frontmatter {
+    //                       path
+    //                       title
+    //                       description
+    //                       image
+    //                     }
+    //                   }
+    //                 }
+    //               }
+    //           }
+    //         `}
+    //         render={data => (
+    //             <ProjectContainer>
+    //                 <TitleContainer>
+    //                     <PageTitle>Projects</PageTitle>
+    //                 </TitleContainer>
+    //                 <ProjectCarousel>
+    //                     {
+    //                         data.allMarkdownRemark.edges.map(() => {
+    //                             return <ProjectItem />
+    //                         })
+    //                     }
+    //                 </ProjectCarousel>
+    //             </ProjectContainer>
+    //         )}
+    //     />
+    // );
 }
 
 export default Project;
