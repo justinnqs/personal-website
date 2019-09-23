@@ -3,11 +3,13 @@ import styled from 'styled-components';
 import { PageTitle } from '../atoms/Headers';
 import { ProjectItem } from '../molecules/ProjectItem';
 import { ProjectCarousel } from '../organisms/ProjectCarousel';
+import { StaticQuery, graphql } from 'gatsby';
 
 const ProjectContainer = styled.div`
     background: ${props => props.theme.background};
-    padding-top: 6.5rem;
+    padding-top: 3rem;
     width: 100vw;
+    min-height: 100vh;
 `
 
 const TitleContainer = styled.div `
@@ -17,19 +19,41 @@ const TitleContainer = styled.div `
 
 const Project = () => {
     return(
-        <ProjectContainer>
-            <TitleContainer>
-                <PageTitle>Projects</PageTitle>
-            </TitleContainer>
-            <ProjectCarousel>
-                <ProjectItem />
-                <ProjectItem />
-                <ProjectItem />
-                <ProjectItem />
-                <ProjectItem />
-                <ProjectItem />
-            </ProjectCarousel>
-        </ProjectContainer>
+        <StaticQuery
+            query={graphql`
+            query ProjectQuery {
+                allMarkdownRemark(
+                    sort: { order: DESC, fields: [frontmatter___date] }
+                    limit: 1000
+                  ) {
+                    edges {
+                      node {
+                        frontmatter {
+                          path
+                          title
+                          description
+                          image
+                        }
+                      }
+                    }
+                  }
+              }
+            `}
+            render={data => (
+                <ProjectContainer>
+                    <TitleContainer>
+                        <PageTitle>Projects</PageTitle>
+                    </TitleContainer>
+                    <ProjectCarousel>
+                        {
+                            data.allMarkdownRemark.edges.map(() => {
+                                return <ProjectItem />
+                            })
+                        }
+                    </ProjectCarousel>
+                </ProjectContainer>
+            )}
+        />
     );
 }
 
