@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import Image from '../image';
-import { Link } from "gatsby";
+import { Link } from 'gatsby';
+import Img from 'gatsby-image';
 
 const ProjectLink = styled(Link) `
     display: flex;
@@ -24,15 +24,16 @@ const ProjectLink = styled(Link) `
 const ImageContainer = styled.div `
     position: relative;
     top: -1px;
-    height: 34rem;
+    height: 35rem;
     width: 35rem;
+    overflow: hidden;
 `
 
 export const ProjectItem = (props) => {
     return(
-        <ProjectLink>
+        <ProjectLink to={props.path}>
             <ImageContainer>
-                <Image />
+                <Img fluid={props.image.childImageSharp.fluid} style={{width: 360, height: 360}}/>
             </ImageContainer>
         </ProjectLink>
     );

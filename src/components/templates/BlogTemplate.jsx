@@ -22,10 +22,16 @@ export default function Template({
 
 export const pageQuery = graphql`
   query($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
+    markdownRemark(fields: {slug: { eq: $path}}) {
       html
       frontmatter {
-        featuredImage
+        featuredImage {
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         title
         date(formatString: "MMMM DD, YYYY")
         description

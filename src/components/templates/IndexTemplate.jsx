@@ -29,9 +29,9 @@ const IndexTemplate = (props) => {
                 <ProjectsContainer>
                     {props.children[1]}
                 </ProjectsContainer>
-                <ContactContainer>
+                {/* <ContactContainer>
                     {props.children[2]}
-                </ContactContainer>
+                </ContactContainer> */}
             </ContentContainer> 
             </ThemeProvider>
         </React.Fragment>
