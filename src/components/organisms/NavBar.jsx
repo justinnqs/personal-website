@@ -11,7 +11,7 @@ const NavBarContainer = styled.header `
     width: 100%;
     height: 6.5rem;
     margin: 0 auto;
-    z-index: 1;
+    z-index: 2;
     background-color: ${props => props.theme.background};
 `
 const LeftSide = styled.span `
@@ -40,9 +40,9 @@ export const NavBar = () => {
        <NavBarContainer>
            <LeftSide>
             <NavBarItems>
-                <Logo>J.S.</Logo>
-                <NavLink>Projects</NavLink>
-                <NavLink>Contact</NavLink>
+                <NavLink href="/#home"><Logo>J.S.</Logo></NavLink>
+                <NavLink href="/#projects">Projects</NavLink>
+                <NavLink href="/#contact">Contact</NavLink>
             </NavBarItems>
            </LeftSide>
            <RightSide>
@@ -54,7 +54,7 @@ export const NavBar = () => {
                 <NavLink href="https://www.linkedin.com/in/justin-sian-44ba06129/">
                     <FontAwesomeIcon icon={['fab', 'linkedin']} size="lg" />
                 </NavLink>
-                <DefaultButtonStyle>Don't Click</DefaultButtonStyle>
+                {/* <DefaultButtonStyle>Don't Click</DefaultButtonStyle> */}
             </NavBarItems>
            </RightSide>
        </NavBarContainer> 

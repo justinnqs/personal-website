@@ -7,7 +7,7 @@ import { StaticQuery, graphql } from 'gatsby';
 
 const ProjectContainer = styled.div`
     background: ${props => props.theme.background};
-    padding-top: 3rem;
+    padding-top: 6.5rem;
     width: 100vw;
     min-height: 100vh;
 `

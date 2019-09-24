@@ -23,15 +23,15 @@ const ContactContainer = styled.section `
 const IndexTemplate = (props) => {
     return(
         <React.Fragment>
-            <LandingContainer>{props.children[0]}</LandingContainer>
+            <LandingContainer id="home">{props.children[0]}</LandingContainer>
             <ThemeProvider theme={ invertTheme }>
             <ContentContainer>
-                <ProjectsContainer>
+                <ProjectsContainer id="projects">
                     {props.children[1]}
                 </ProjectsContainer>
-                {/* <ContactContainer>
+                <ContactContainer id="contact">
                     {props.children[2]}
-                </ContactContainer> */}
+                </ContactContainer>
             </ContentContainer> 
             </ThemeProvider>
         </React.Fragment>

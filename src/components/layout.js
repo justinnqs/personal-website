@@ -12,6 +12,11 @@ import { useStaticQuery, graphql } from "gatsby"
 import { NavBar } from './organisms/NavBar';
 import { Terminal } from './molecules/Terminal';
 
+if (typeof window !== "undefined") {
+  // eslint-disable-next-line global-require
+  require("smooth-scroll")('a[href*="#"]')
+}
+
 const Layout = (props) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {

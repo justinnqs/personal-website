@@ -5,6 +5,7 @@ export const DefaultLinkStyle = styled.a`
     font-size: 1.8rem;
     color: ${props => props.theme.font};
     cursor: pointer;
+    text-decoration: none;
     &:hover {
         color: ${props => props.theme.subtleHighlight};
     }
