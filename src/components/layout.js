@@ -30,9 +30,9 @@ const Layout = (props) => {
 
   return (
     <>
-      <NavBar></NavBar>
+      {/* <NavBar></NavBar> */}
         <main>{props.children}</main>
-      <Terminal/>
+      {/* <Terminal/> */}
     </>
   )
 }
